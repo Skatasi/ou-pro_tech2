@@ -10,8 +10,9 @@ while abs(x**2 - a)>=epsilon:
     else:
         x += step
     numGuesses += 1
-    print("numGuesses = ", numGuesses) # 調べた回数
-    if abs(x**2 - a) >= epsilon:
-        print("Failed on square root of ", a)
-    else:
-        print(x, " is close to square root of ", a)
+
+print("numGuesses = ", numGuesses) # 調べた回数
+if abs(x**2 - a) >= epsilon:
+    print("Failed on square root of ", a)
+else:
+    print(x, " is close to square root of ", a)
