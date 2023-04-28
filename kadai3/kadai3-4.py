@@ -1,6 +1,7 @@
 import pandas as pd
 from matplotlib import pyplot as plt
 
+#最新５０日分の日経平均株価を折れ線グラフとして出力するプログラム
 def main():
     #csvファイルからの読み込み
     df = pd.read_csv("nikkei_stock_average_daily_jp.csv")
