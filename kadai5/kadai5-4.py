@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 N=100
 epsilon = 0.01
-lr = 0.001
+lr = 0.1
 
 #100個の身長体重対データをランダムで抽出し、標準化するプログラム
 def main():
@@ -25,8 +25,8 @@ def main():
     mse = sum((y[i] - (a + b*x[i]))**2 for i in range(N))/N
     mse_list = [mse]
     while 1:
-        new_a = a - lr * sum((a + b*x[i])- y[i] for i in range(N))
-        new_b = b - lr * sum(x[i]*((a + b*x[i])- y[i]) for i in range(N))
+        new_a = a - lr * sum((a + b*x[i])- y[i] for i in range(N))/N
+        new_b = b - lr * sum(x[i]*((a + b*x[i])- y[i]) for i in range(N))/N
         a = new_a
         b = new_b
         new_mse = sum((y[i] - (a + b*x[i]))**2 for i in range(N))/N
@@ -37,7 +37,6 @@ def main():
             mse = new_mse
 
     #折れ線グラフ化
-    print(mse_list)
     count = [i+1 for i in range(len(mse_list))]
     plt.scatter(count,mse_list)
     plt.show()

@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 N=100
-epsilon = 0.001
-lr = 0.001
+epsilon = 0.01
+lr = 0.1
 
 #100個の身長体重対データをランダムで抽出し、標準化するプログラム
 def main():
