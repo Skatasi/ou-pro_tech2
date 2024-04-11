@@ -1,4 +1,5 @@
 *.jpg
+*.jpeg
 *.aux
 *.log
-
+*.pdf
